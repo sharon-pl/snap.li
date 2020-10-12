@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Landing Page</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-social/5.1.1/bootstrap-social.min.css" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="//cdn.datatables.net/1.10.22/css/jquery.dataTables.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<header>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container">
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse justify-content-between" id="navbarTogglerDemo01">
+                <a class="navbar-brand" href="index.html">Snapli</a>
+                <ul class="navbar-nav  mt-2 mt-lg-0">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="#"><i class="fa fa-exclamation" style="font-size: 17px;"></i> Alerts <span class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#"><i class="fa fa-cog" style="font-size: 17px;"></i> Settings</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link disabled" href="#"><i class="fa fa-question-circle" style="font-size: 17px;"></i> About</a>
+                    </li>
+                </ul>
+                <form class="form-inline my-2 my-lg-0">
+                    <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+                    <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+                </form>
+            </div>
+        </div>
+    </nav>
+</header>
+<section class="section">
+    <div class="container">
+        <div class="row py-5 justify-content-center align-items-center">
+            <div class="col text-center">
+                <a type="button" class="btn btn-primary btn-lg" href="snapview.html">Snap View</a>
+            </div>
+            <div class="col text-center">
+                <a type="button" class="btn btn-success btn-lg" href="appview.html">App View</a>
+            </div>
+            <div class="col text-center">
+                <a type="button" class="btn btn-secondary btn-lg" href="arrayview.html">Array View</a>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <table id="main" class="display" style="width:100%">
+            <thead>
+            <tr>
+                <th>Date</th>
+                <th>Severity</th>
+                <th>User</th>
+                <th>Snap Data</th>
+                <th>Array Data</th>
+                <th>Content</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <td>2011/04/25</td>
+                <td><div class="s_failed" title="Failed"></div></td>
+                <td>Tiger Nixon</td>
+                <td>System Architect</td>
+                <td>Edinburgh</td>
+                <td>table contents</td>
+            </tr>
+            <tr>
+                <td>2011/07/25</td>
+                <td><div class="s_completed" title="Completed"></div></td>
+                <td>Garrett Winters</td>
+                <td>Accountant</td>
+                <td>Tokyo</td>
+                <td>table contents</td>
+            </tr>
+            <tr>
+                <td>2009/01/12</td>
+                <td><div class="s_processing" title="Processing"></div></td>
+                <td>Ashton Cox</td>
+                <td>Junior Technical Author</td>
+                <td>San Francisco</td>
+                <td>table contents</td>
+            </tr>
+            <tr>
+                <td>2012/03/29</td>
+                <td><div class="s_failed" title="Failed"></div></td>
+                <td>Cedric Kelly</td>
+                <td>Senior Javascript Developer</td>
+                <td>Edinburgh</td>
+                <td>table contents</td>
+            </tr>
+            <tr>
+                <td>2008/11/28</td>
+                <td><div class="s_processing" title="Processing"></div></td>
+                <td>Airi Satou</td>
+                <td>Accountant</td>
+                <td>Tokyo</td>
+                <td>table contents</td>
+            </tr>
+            <tr>
+                <td>2012/12/02</td>
+                <td><div class="s_processing" title="Processing"></div></td>
+                <td>Brielle Williamson</td>
+                <td>Integration Specialist</td>
+                <td>New York</td>
+                <td>table contents</td>
+            </tr>
+            <tr>
+                <td>2012/08/06</td>
+                <td><div class="s_completed" title="Completed"></div></td>
+                <td>Herrod Chandler</td>
+                <td>Sales Assistant</td>
+                <td>San Francisco</td>
+                <td>table contents</td>
+            </tr>
+            <tr>
+                <td>2010/10/14</td>
+                <td><div class="s_failed" title="Failed"></div></td>
+                <td>Rhona Davidson</td>
+                <td>Integration Specialist</td>
+                <td>Tokyo</td>
+                <td>table contents</td>
+            </tr>
+            <tr>
+                <td>2009/09/15</td>
+                <td><div class="s_completed" title="Completed"></div></td>
+                <td>Colleen Hurst</td>
+                <td>Javascript Developer</td>
+                <td>San Francisco</td>
+                <td>table contents</td>
+            </tr>
+            <tr>
+                <td>2008/12/13</td>
+                <td><div class="s_completed" title="Completed"></div></td>
+                <td>Sonya Frost</td>
+                <td>Software Engineer</td>
+                <td>Edinburgh</td>
+                <td>table contents</td>
+            </tr>
+            <tr>
+                <td>2008/12/19</td>
+                <td><div class="s_processing" title="Processing"></div></td>
+                <td>Jena Gaines</td>
+                <td>Office Manager</td>
+                <td>London</td>
+                <td>table contents</td>
+            </tr>
+            <tr>
+                <td>2013/03/03</td>
+                <td><div class="s_completed" title="Completed"></div></td>
+                <td>Quinn Flynn</td>
+                <td>Support Lead</td>
+                <td>Edinburgh</td>
+                <td>table contents</td>
+            </tr>
+            <tr>
+                <td>2008/10/16</td>
+                <td><div class="s_processing" title="Processing"></div></td>
+                <td>Charde Marshall</td>
+                <td>Regional Director</td>
+                <td>San Francisco</td>
+                <td>table contents</td>
+            </tr>
+            <tr>
+                <td>2012/12/18</td>
+                <td><div class="s_completed" title="Completed"></div></td>
+                <td>Haley Kennedy</td>
+                <td>Senior Marketing Designer</td>
+                <td>London</td>
+                <td>table contents</td>
+            </tr>
+            <tr>
+                <td>2010/03/17</td>
+                <td><div class="s_failed" title="Failed"></div></td>
+                <td>Tatyana Fitzpatrick</td>
+                <td>Regional Director</td>
+                <td>London</td>
+                <td>table contents</td>
+            </tr>
+            <tr>
+                <td>2012/11/27</td>
+                <td><div class="s_completed" title="Completed"></div></td>
+                <td>Michael Silva</td>
+                <td>Marketing Designer</td>
+                <td>London</td>
+                <td>table contents</td>
+            </tr>
+            <tr>
+                <td>2010/06/09</td>
+                <td><div class="s_completed" title="Completed"></div></td>
+                <td>Paul Byrd</td>
+                <td>Chief Financial Officer (CFO)</td>
+                <td>New York</td>
+                <td>table contents</td>
+            </tr>
+            <tr>
+                <td>2009/04/10</td>
+                <td><div class="s_completed" title="Completed"></div></td>
+                <td>Gloria Little</td>
+                <td>Systems Administrator</td>
+                <td>New York</td>
+                <td>table contents</td>
+            </tr>
+            <tr>
+                <td>2012/10/13</td>
+                <td><div class="s_failed" title="Failed"></div></td>
+                <td>Bradley Greer</td>
+                <td>Software Engineer</td>
+                <td>London</td>
+                <td>table contents</td>
+            </tr>
+            <tr>
+                <td>2012/09/26</td>
+                <td><div class="s_processing" title="Processing"></div></td>
+                <td>Dai Rios</td>
+                <td>Personnel Lead</td>
+                <td>Edinburgh</td>
+                <td>table contents</td>
+            </tr>
+            <tr>
+                <td>2011/09/03</td>
+                <td><div class="s_completed" title="Completed"></div></td>
+                <td>Jenette Caldwell</td>
+                <td>Development Lead</td>
+                <td>New York</td>
+                <td>table contents</td>
+            </tr>
+            <tr>
+                <td>2009/06/25</td>
+                <td><div class="s_processing" title="Processing"></div></td>
+                <td>Yuri Berry</td>
+                <td>Chief Marketing Officer (CMO)</td>
+                <td>New York</td>
+                <td>table contents</td>
+            </tr>
+            <tr>
+                <td>2011/12/12</td>
+                <td><div class="s_failed" title="Failed"></div></td>
+                <td>Caesar Vance</td>
+                <td>Pre-Sales Support</td>
+                <td>New York</td>
+                <td>table contents</td>
+            </tr>
+            <tr>
+                <td>2010/09/20</td>
+                <td><div class="s_completed" title="Completed"></div></td>
+                <td>Doris Wilder</td>
+                <td>Sales Assistant</td>
+                <td>Sydney</td>
+                <td>table contents</td>
+            </tr>
+            <tr>
+                <td>2009/10/09</td>
+                <td><div class="s_processing" title="Processing"></div></td>
+                <td>Angelica Ramos</td>
+                <td>Chief Executive Officer (CEO)</td>
+                <td>London</td>
+                <td>table contents</td>
+            </tr>
+            <tr>
+                <td>2010/12/22</td>
+                <td><div class="s_completed" title="Completed"></div></td>
+                <td>Gavin Joyce</td>
+                <td>Developer</td>
+                <td>Edinburgh</td>
+                <td>table contents</td>
+            </tr>
+            <tr>
+                <td>2010/11/14</td>
+                <td><div class="s_failed" title="Failed"></div></td>
+                <td>Jennifer Chang</td>
+                <td>Regional Director</td>
+                <td>Singapore</td>
+                <td>table contents</td>
+            </tr>
+            <tr>
+                <td>2011/06/07</td>
+                <td><div class="s_completed" title="Completed"></div></td>
+                <td>Brenden Wagner</td>
+                <td>Software Engineer</td>
+                <td>San Francisco</td>
+                <td>table contents</td>
+            </tr>
+            </tbody>
+            <tfoot>
+            <tr>
+                <th>Date</th>
+                <th>Severity</th>
+                <th>User</th>
+                <th>Snap Data</th>
+                <th>Array Data</th>
+                <th>Content</th>
+            </tr>
+            </tfoot>
+        </table>
+    </div>
+</section>
+<footer>
+
+</footer>
+
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+<script src="//cdn.datatables.net/1.10.22/js/jquery.dataTables.min.js"></script>
+<script src="js/custom.js"></script>
+<script>
+    jQuery(document).ready( function () {
+        jQuery('#main').DataTable({
+            "scrollX": true
+        });
+        jQuery('[data-toggle="tooltip"]').tooltip();
+        jQuery('.example-popover').popover({
+            container: 'body',
+        })
+    });
+</script>
+</body>
+
+</html>
