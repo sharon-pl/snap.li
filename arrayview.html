@@ -13,14 +13,6 @@
 <body>
 
 <header>
-    <div class="container-fluid bg-light">
-        <div class="row py-1 justify-content-between align-items-center">
-            <div class="col">
-                <a class="main_button"  data-toggle="modal" data-target="#main_ed">Main</a>
-            </div>
-            <div class="col"><div class="top_right_txt">XXXXX Software Version</div></div>
-        </div>
-    </div>
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
         <div class="container-fluid">
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
@@ -53,22 +45,31 @@
         <div class="container-fluid">
             <div class="row  px-3 justify-content-center align-items-center">
                 <div class="col text-center">
-                    <h1>ARRAY ViEW</h1>
+                    <h1>Array View</h1>
                 </div>
                 <a type="button" class="btn btn-success btn-lg" data-toggle="modal" data-target="#addarray">Add Array</a>
             </div>
         </div>
     </div>
     <div class="card-body">
+        <div class="container-fluid">
+            <div class="row my-3 align-items-center justify-content-between">
+                <small></small>
+                <small style="color:red;">date is from 5-5-2020 12:00 EST</small>
+                <button type="button" class="btn btn-outline-secondary">Refresh <i class="fa fa-refresh"></i></button>
+            </div>
+        </div>
+
         <table id="main" class="display" style="width:100%">
             <thead>
             <tr>
                 <th>Array Name</th>
                 <th>Array Status</th>
                 <th>Counts of Snaps</th>
-                <th>% xxx Provisioned</th>
+                <th>% Over provisioned</th>
                 <th>Total Compacity</th>
                 <th>Available Compacity</th>
+                <th>Manufacture</th>
             </tr>
             </thead>
             <tbody>
@@ -91,6 +92,7 @@
                         </div>
                     </div>
                 </td>
+                <td>Tiger Nixon</td>
             </tr>
             <tr>
                 <td>Garrett Winters</td>
@@ -111,6 +113,7 @@
                         </div>
                     </div>
                 </td>
+                <td>Garrett Winters</td>
             </tr>
             <tr>
                 <td>Ashton Cox</td>
@@ -131,6 +134,7 @@
                         </div>
                     </div>
                 </td>
+                <td>Ashton Cox</td>
             </tr>
             <tr>
                 <td>Cedric Kelly</td>
@@ -151,6 +155,7 @@
                         </div>
                     </div>
                 </td>
+                <td>Cedric Kelly</td>
             </tr>
             <tr>
                 <td>Airi Satou</td>
@@ -171,6 +176,7 @@
                         </div>
                     </div>
                 </td>
+                <td>Airi Satou</td>
             </tr>
             <tr>
                 <td>Brielle Williamson</td>
@@ -191,6 +197,7 @@
                         </div>
                     </div>
                 </td>
+                <td>Brielle Williamson</td>
             </tr>
             <tr>
                 <td>Herrod Chandler</td>
@@ -211,6 +218,7 @@
                         </div>
                     </div>
                 </td>
+                <td>Herrod Chandler</td>
             </tr>
             <tr>
                 <td>Rhona Davidson</td>
@@ -231,6 +239,7 @@
                         </div>
                     </div>
                 </td>
+                <td>Rhona Davidson</td>
             </tr>
             <tr>
                 <td>Colleen Hurst</td>
@@ -251,6 +260,7 @@
                         </div>
                     </div>
                 </td>
+                <td>Colleen Hurst</td>
             </tr>
             <tr>
                 <td>Sonya Frost</td>
@@ -271,6 +281,7 @@
                         </div>
                     </div>
                 </td>
+                <td>Sonya Frost</td>
             </tr>
             <tr>
                 <td>Jena Gaines</td>
@@ -291,6 +302,7 @@
                         </div>
                     </div>
                 </td>
+                <td>Jena Gaines</td>
             </tr>
             <tr>
                 <td>Quinn Flynn</td>
@@ -311,6 +323,7 @@
                         </div>
                     </div>
                 </td>
+                <td>Quinn Flynn</td>
             </tr>
             <tr>
                 <td>Charde Marshall</td>
@@ -331,6 +344,7 @@
                         </div>
                     </div>
                 </td>
+                <td>Charde Marshall</td>
             </tr>
             </tbody>
             <tfoot>
@@ -338,51 +352,16 @@
                 <th>Array Name</th>
                 <th>Array Status</th>
                 <th>Counts of Snaps</th>
-                <th>% xxx Provisioned</th>
+                <th>% Over provisioned</th>
                 <th>Total Compacity</th>
                 <th>Available Compacity</th>
+                <th>Manufacture</th>
             </tr>
             </tfoot>
         </table>
     </div>
 </div>
 
-<div class="modal fade" id="main_ed" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
-    <div class="modal-dialog modal-dialog-centered" role="document">
-        <div class="modal-content">
-            <div class="modal-header">
-                <h5 class="modal-title">Add Data</h5>
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                    <span aria-hidden="true">&times;</span>
-                </button>
-            </div>
-            <div class="modal-body">
-                <form>
-                    <div class="form-group row" style="margin-right:0;">
-                        <label for="host" class="col-3">Host</label>
-                        <input type="text" class="form-control col-9" id="host" placeholder="Host Address">
-                    </div>
-                    <div class="form-group row" style="margin-right:0;">
-                        <label for="array_name" class="col-3">Array Name</label>
-                        <input type="text" class="form-control col-9" id="array_name" placeholder="Array Name">
-                    </div>
-                    <div class="form-group row" style="margin-right:0;">
-                        <label for="date" class="col-3">Password</label>
-                        <input type="date" class="form-control col-9" id="date" placeholder="">
-                    </div>
-                    <div class="form-group row" style="margin-right:0;">
-                        <label for="details" class="col-3">Details</label>
-                        <textarea class="form-control col-9" id="details" placeholder="Details"></textarea>
-                    </div>
-                </form>
-            </div>
-            <div class="modal-footer">
-                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                <button type="button" class="btn btn-primary">Save changes</button>
-            </div>
-        </div>
-    </div>
-</div>
 <div class="modal fade" id="addarray" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
     <div class="modal-dialog modal-dialog-centered" role="document">
         <div class="modal-content">

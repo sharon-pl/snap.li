@@ -12,14 +12,14 @@
 </head>
 <body>
 <header>
-    <div class="container-fluid bg-light">
-        <div class="row py-1 justify-content-between align-items-center">
-            <div class="col">
-                <a class="main_button"  data-toggle="modal" data-target="#main_ed">Main</a>
-            </div>
-            <div class="col"><div class="top_right_txt">XXXXX Software Version</div></div>
-        </div>
-    </div>
+    <!--<div class="container-fluid bg-light">-->
+        <!--<div class="row py-1 justify-content-between align-items-center">-->
+            <!--<div class="col">-->
+                <!--<a class="main_button"  data-toggle="modal" data-target="#main_ed">Main</a>-->
+            <!--</div>-->
+            <!--<div class="col"><div class="top_right_txt">XXXXX Software Version</div></div>-->
+        <!--</div>-->
+    <!--</div>-->
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
         <div class="container-fluid">
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
@@ -38,31 +38,83 @@
                         <a class="nav-link" href="about.html"><i class="fa fa-question-circle" style="font-size: 17px;"></i> About</a>
                     </li>
                 </ul>
-                <form class="form-inline my-2 my-lg-0">
-                    <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-                    <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
-                </form>
+                <div class="d-flex align-items-center justify-content-between">
+                    <form class="form-inline my-2 my-lg-0">
+                        <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+                        <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+                    </form>
+                    <a href="/?logout.php" class="mx-1">Log Out</a>
+                </div>
+
             </div>
         </div>
     </nav>
 </header>
-<div class="card mx-3 my-5">
-    <div class="card-header">
-        <div class="container-fluid">
-            <div class="row  justify-content-between align-items-center">
-                <div class="col text-center">
-                    <a type="button" class="btn btn-primary btn-lg" href="snapview.html">Snap View</a>
+<div class="container-fluid  mt-5">
+    <div class="row">
+        <div class="col">
+            <div class="card">
+                <div class="card-body bg-primary text-white">
+                    <div class="row">
+                        <div class="col">
+                            <a href="snapview.html"><i class="fa fa-camera" style="font-size: 87px;color: #fff;"></i></a>
+                        </div>
+                        <div class="col">
+                            <h2 class="card-title"><a href="snapview.html" style="color:#fff;">Snap View</a></h2>
+                            <p>Users Online</p>
+                        </div>
+                    </div>
                 </div>
-                <div class="col text-center">
-                    <a type="button" class="btn btn-success btn-lg" href="appview.html">App View</a>
+            </div>
+        </div>
+        <div class="col">
+            <div class="card">
+                <div class="card-body bg-success text-white">
+                    <div class="row">
+                        <div class="col">
+                            <a href="appview.html"><i class="fa fa-database" style="font-size: 87px;color: #fff;"></i></a>
+                        </div>
+                        <div class="col">
+                            <h2 class="card-title"><a href="appview.html" style="color:#fff;">App View</a></h2>
+                            <p id="i3c1ry">Messages</p>
+                        </div>
+                    </div>
                 </div>
-                <div class="col text-center">
-                    <a type="button" class="btn btn-secondary btn-lg" href="arrayview.html">Array View</a>
+            </div>
+        </div>
+        <div class="col">
+            <div class="card">
+                <div class="card-body bg-info text-white">
+                    <div class="row">
+                        <div class="col">
+                            <a href="arrayview.html"><i class="fa fa-tasks" style="font-size: 87px;color: #fff;"></i></a>
+                        </div>
+                        <div class="col">
+                            <h2 class="card-title"><a href="arrayview.html" style="color:#fff;">Array View</a></h2>
+                            <p id="if1r6q">Metrics</p>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
+
+</div>
+<div class="card mx-3 my-3">
+
     <div class="card-body">
+        <form>
+            <div class="form-group">
+                <label for="update_interval">Update Interval</label>
+                <select class="form-control" id="update_interval">
+                    <option>5 mins</option>
+                    <option>10 mins</option>
+                    <option>30 mins</option>
+                    <option>1 hour</option>
+                    <option>3 hours</option>
+                </select>
+            </div>
+        </form>
         <table id="main" class="display" style="width:100%">
             <thead>
             <tr>
@@ -81,7 +133,7 @@
                 <td>Tiger Nixon</td>
                 <td>System Architect</td>
                 <td>Edinburgh</td>
-                <td>table contents</td>
+                <td><a data-toggle="modal" data-target="#main_ed">table contents</a></td>
             </tr>
             <tr>
                 <td>2011/07/25</td>
@@ -89,7 +141,7 @@
                 <td>Garrett Winters</td>
                 <td>Accountant</td>
                 <td>Tokyo</td>
-                <td>table contents</td>
+                <td><a data-toggle="modal" data-target="#main_ed">table contents</a></td>
             </tr>
             <tr>
                 <td>2009/01/12</td>
@@ -97,7 +149,7 @@
                 <td>Ashton Cox</td>
                 <td>Junior Technical Author</td>
                 <td>San Francisco</td>
-                <td>table contents</td>
+                <td><a data-toggle="modal" data-target="#main_ed">table contents</a></td>
             </tr>
             <tr>
                 <td>2012/03/29</td>
@@ -105,7 +157,7 @@
                 <td>Cedric Kelly</td>
                 <td>Senior Javascript Developer</td>
                 <td>Edinburgh</td>
-                <td>table contents</td>
+                <td><a data-toggle="modal" data-target="#main_ed">table contents</a></td>
             </tr>
             <tr>
                 <td>2008/11/28</td>
@@ -113,7 +165,7 @@
                 <td>Airi Satou</td>
                 <td>Accountant</td>
                 <td>Tokyo</td>
-                <td>table contents</td>
+                <td><a data-toggle="modal" data-target="#main_ed">table contents</a></td>
             </tr>
             <tr>
                 <td>2012/12/02</td>
@@ -121,7 +173,7 @@
                 <td>Brielle Williamson</td>
                 <td>Integration Specialist</td>
                 <td>New York</td>
-                <td>table contents</td>
+                <td><a data-toggle="modal" data-target="#main_ed">table contents</a></td>
             </tr>
             <tr>
                 <td>2012/08/06</td>
@@ -129,7 +181,7 @@
                 <td>Herrod Chandler</td>
                 <td>Sales Assistant</td>
                 <td>San Francisco</td>
-                <td>table contents</td>
+                <td><a data-toggle="modal" data-target="#main_ed">table contents</a></td>
             </tr>
             <tr>
                 <td>2010/10/14</td>
@@ -137,7 +189,7 @@
                 <td>Rhona Davidson</td>
                 <td>Integration Specialist</td>
                 <td>Tokyo</td>
-                <td>table contents</td>
+                <td><a data-toggle="modal" data-target="#main_ed">table contents</a></td>
             </tr>
             <tr>
                 <td>2009/09/15</td>
@@ -145,7 +197,7 @@
                 <td>Colleen Hurst</td>
                 <td>Javascript Developer</td>
                 <td>San Francisco</td>
-                <td>table contents</td>
+                <td><a data-toggle="modal" data-target="#main_ed">table contents</a></td>
             </tr>
             <tr>
                 <td>2008/12/13</td>
@@ -153,7 +205,7 @@
                 <td>Sonya Frost</td>
                 <td>Software Engineer</td>
                 <td>Edinburgh</td>
-                <td>table contents</td>
+                <td><a data-toggle="modal" data-target="#main_ed">table contents</a></td>
             </tr>
             <tr>
                 <td>2008/12/19</td>
@@ -161,7 +213,7 @@
                 <td>Jena Gaines</td>
                 <td>Office Manager</td>
                 <td>London</td>
-                <td>table contents</td>
+                <td><a data-toggle="modal" data-target="#main_ed">table contents</a></td>
             </tr>
             <tr>
                 <td>2013/03/03</td>
@@ -169,7 +221,7 @@
                 <td>Quinn Flynn</td>
                 <td>Support Lead</td>
                 <td>Edinburgh</td>
-                <td>table contents</td>
+                <td><a data-toggle="modal" data-target="#main_ed">table contents</a></td>
             </tr>
             <tr>
                 <td>2008/10/16</td>
@@ -177,7 +229,7 @@
                 <td>Charde Marshall</td>
                 <td>Regional Director</td>
                 <td>San Francisco</td>
-                <td>table contents</td>
+                <td><a data-toggle="modal" data-target="#main_ed">table contents</a></td>
             </tr>
             <tr>
                 <td>2012/12/18</td>
@@ -185,7 +237,7 @@
                 <td>Haley Kennedy</td>
                 <td>Senior Marketing Designer</td>
                 <td>London</td>
-                <td>table contents</td>
+                <td><a data-toggle="modal" data-target="#main_ed">table contents</a></td>
             </tr>
             <tr>
                 <td>2010/03/17</td>
@@ -193,7 +245,7 @@
                 <td>Tatyana Fitzpatrick</td>
                 <td>Regional Director</td>
                 <td>London</td>
-                <td>table contents</td>
+                <td><a data-toggle="modal" data-target="#main_ed">table contents</a></td>
             </tr>
             <tr>
                 <td>2012/11/27</td>
@@ -201,7 +253,7 @@
                 <td>Michael Silva</td>
                 <td>Marketing Designer</td>
                 <td>London</td>
-                <td>table contents</td>
+                <td><a data-toggle="modal" data-target="#main_ed">table contents</a></td>
             </tr>
             <tr>
                 <td>2010/06/09</td>
@@ -209,7 +261,7 @@
                 <td>Paul Byrd</td>
                 <td>Chief Financial Officer (CFO)</td>
                 <td>New York</td>
-                <td>table contents</td>
+                <td><a data-toggle="modal" data-target="#main_ed">table contents</a></td>
             </tr>
             <tr>
                 <td>2009/04/10</td>
@@ -217,7 +269,7 @@
                 <td>Gloria Little</td>
                 <td>Systems Administrator</td>
                 <td>New York</td>
-                <td>table contents</td>
+                <td><a data-toggle="modal" data-target="#main_ed">table contents</a></td>
             </tr>
             <tr>
                 <td>2012/10/13</td>
@@ -225,7 +277,7 @@
                 <td>Bradley Greer</td>
                 <td>Software Engineer</td>
                 <td>London</td>
-                <td>table contents</td>
+                <td><a data-toggle="modal" data-target="#main_ed">table contents</a></td>
             </tr>
             <tr>
                 <td>2012/09/26</td>
@@ -233,7 +285,7 @@
                 <td>Dai Rios</td>
                 <td>Personnel Lead</td>
                 <td>Edinburgh</td>
-                <td>table contents</td>
+                <td><a data-toggle="modal" data-target="#main_ed">table contents</a></td>
             </tr>
             <tr>
                 <td>2011/09/03</td>
@@ -241,7 +293,7 @@
                 <td>Jenette Caldwell</td>
                 <td>Development Lead</td>
                 <td>New York</td>
-                <td>table contents</td>
+                <td><a data-toggle="modal" data-target="#main_ed">table contents</a></td>
             </tr>
             <tr>
                 <td>2009/06/25</td>
@@ -249,7 +301,7 @@
                 <td>Yuri Berry</td>
                 <td>Chief Marketing Officer (CMO)</td>
                 <td>New York</td>
-                <td>table contents</td>
+                <td><a data-toggle="modal" data-target="#main_ed">table contents</a></td>
             </tr>
             <tr>
                 <td>2011/12/12</td>
@@ -257,7 +309,7 @@
                 <td>Caesar Vance</td>
                 <td>Pre-Sales Support</td>
                 <td>New York</td>
-                <td>table contents</td>
+                <td><a data-toggle="modal" data-target="#main_ed">table contents</a></td>
             </tr>
             <tr>
                 <td>2010/09/20</td>
@@ -265,7 +317,7 @@
                 <td>Doris Wilder</td>
                 <td>Sales Assistant</td>
                 <td>Sydney</td>
-                <td>table contents</td>
+                <td><a data-toggle="modal" data-target="#main_ed">table contents</a></td>
             </tr>
             <tr>
                 <td>2009/10/09</td>
@@ -273,7 +325,7 @@
                 <td>Angelica Ramos</td>
                 <td>Chief Executive Officer (CEO)</td>
                 <td>London</td>
-                <td>table contents</td>
+                <td><a data-toggle="modal" data-target="#main_ed">table contents</a></td>
             </tr>
             <tr>
                 <td>2010/12/22</td>
@@ -281,7 +333,7 @@
                 <td>Gavin Joyce</td>
                 <td>Developer</td>
                 <td>Edinburgh</td>
-                <td>table contents</td>
+                <td><a data-toggle="modal" data-target="#main_ed">table contents</a></td>
             </tr>
             <tr>
                 <td>2010/11/14</td>
@@ -289,7 +341,7 @@
                 <td>Jennifer Chang</td>
                 <td>Regional Director</td>
                 <td>Singapore</td>
-                <td>table contents</td>
+                <td><a data-toggle="modal" data-target="#main_ed">table contents</a></td>
             </tr>
             <tr>
                 <td>2011/06/07</td>
@@ -297,7 +349,7 @@
                 <td>Brenden Wagner</td>
                 <td>Software Engineer</td>
                 <td>San Francisco</td>
-                <td>table contents</td>
+                <td><a data-toggle="modal" data-target="#main_ed">table contents</a></td>
             </tr>
             </tbody>
             <tfoot>

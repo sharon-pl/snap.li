@@ -46,49 +46,7 @@
         <form class="settings_form">
             <div class="container-fluid">
                 <div class="row align-items-center">
-                    <div class="col-md-6">
-                        <div class="card">
-                            <div class="card-header text-center"><h3>Auth: Local</h3></div>
-                            <div class="card-body">
-                                <div class="form-row align-items-center">
-                                    <div class="form-group col-md-4">
-                                        <h4>Users</h4>
-                                    </div>
-                                    <div class="form-group col-md-8">
-                                        <div class="form-check form-check-inline">
-                                            <input class="form-check-input" name="users" type="radio" id="users_ad" value="AD">
-                                            <label class="form-check-label" for="users_ad">AD</label>
-                                        </div>
-                                        <div class="form-check form-check-inline">
-                                            <input class="form-check-input" name="users" type="radio" id="user_ldap" value="LDAP">
-                                            <label class="form-check-label" for="user_ldap">LDAP</label>
-                                        </div>
-                                        <div class="form-check form-check-inline">
-                                            <input class="form-check-input" name="users" type="radio" id="user_ntlm" value="NTLM">
-                                            <label class="form-check-label" for="user_ntlm">NTLM</label>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="divider"></div>
-                                <div class="form-row align-items-center">
-                                    <div class="form-group col-md-4">
-                                        <h4>Software Updates</h4>
-                                    </div>
-                                    <div class="form-group col-md-8">
-                                        <h5>UA.2</h5>
-                                        <div class="form-check form-check-inline">
-                                            <input class="form-check-input" type="checkbox" id="check_for_update" value="Check For Updates">
-                                            <label class="form-check-label" for="check_for_update">Check For Updates</label>
-                                        </div>
-                                        <div class="progress">
-                                            <div class="progress-bar bg-success" role="progressbar" style="width: 25%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-6">
+                    <div class="col-md-12">
                         <div class="card">
                             <div class="card-header text-center"><h3>Users Permissions/Roles</h3></div>
                             <div class="card-body">
@@ -123,81 +81,121 @@
                             </div>
                         </div>
                     </div>
+                </div>
+                <div class="row mt-3">
+                    <div class="col-md-3 mb-3">
+                        <ul class="nav nav-pills flex-column" id="myTab" role="tablist">
+                            <li class="nav-item">
+                                <a class="nav-link active" id="users-tab" data-toggle="tab" href="#users" role="tab" aria-controls="users" aria-selected="true">Users</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" id="software_updates-tab" data-toggle="tab" href="#software_updates" role="tab" aria-controls="software_updates" aria-selected="false">Software Updates</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" id="configuration-tab" data-toggle="tab" href="#configuration" role="tab" aria-controls="configuration" aria-selected="false">Configuration</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" id="network-tab" data-toggle="tab" href="#network" role="tab" aria-controls="network" aria-selected="false">Network</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" id="licenced_modules-tab" data-toggle="tab" href="#licenced_modules" role="tab" aria-controls="licenced_modules" aria-selected="false">Licenced Modules</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" id="snapli_api-tab" data-toggle="tab" href="#snapli_api" role="tab" aria-controls="snapli_api" aria-selected="false">Snapli API</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" id="snapli_users-tab" data-toggle="tab" href="#snapli_users" role="tab" aria-controls="snapli_users" aria-selected="false">Snapli Users</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="col-md-9">
+                        <div class="tab-content" id="myTabContent">
+                            <div class="tab-pane fade show active" id="users" role="tabpanel" aria-labelledby="users-tab">
+                                <div class="form-group">
+                                    <div class="form-check form-check-inline">
+                                        <input class="form-check-input" name="users" type="radio" id="users_ad" value="AD">
+                                        <label class="form-check-label" for="users_ad">AD</label>
+                                    </div>
+                                    <div class="form-check form-check-inline">
+                                        <input class="form-check-input" name="users" type="radio" id="user_ldap" value="LDAP">
+                                        <label class="form-check-label" for="user_ldap">LDAP</label>
+                                    </div>
+                                    <div class="form-check form-check-inline">
+                                        <input class="form-check-input" name="users" type="radio" id="user_ntlm" value="NTLM">
+                                        <label class="form-check-label" for="user_ntlm">NTLM</label>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="tab-pane fade" id="software_updates" role="tabpanel" aria-labelledby="software_updates-tab">
+                                <div class="form-group">
+                                    <h5>UA.2</h5>
+                                    <div class="form-check form-check-inline">
+                                        <input class="form-check-input" type="checkbox" id="check_for_update" value="Check For Updates">
+                                        <label class="form-check-label" for="check_for_update">Check For Updates</label>
+                                    </div>
+                                    <div class="progress">
+                                        <div class="progress-bar bg-success" role="progressbar" style="width: 25%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="tab-pane fade" id="configuration" role="tabpanel" aria-labelledby="configuration-tab">
+                                <div class="form-group">
+                                    <input class="form-check-input" name="network" type="checkbox" id="software_config" value="Software Config">
+                                    <label class="form-check-label" for="software_config">Software Config</label>
+                                    <small class="form-text text-muted">
+                                        Your password must be 8-20 characters long, contain letters and numbers, and must not contain spaces, special characters, or emoji.
+                                    </small>
+                                </div>
+                            </div>
+                            <div class="tab-pane fade" id="network" role="tabpanel" aria-labelledby="network-tab">
+                                <div class="form-group">
+                                    <div class="form-check">
+                                        <input class="form-check-input" name="network" type="radio" id="ip_dns" value="IP / DNS">
+                                        <label class="form-check-label" for="ip_dns">IP / DNS</label>
+                                    </div>
+                                    <div class="form-check">
+                                        <input class="form-check-input" name="network" type="radio" id="netmask" value="Net Mask">
+                                        <label class="form-check-label" for="netmask">Net Mask</label>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="tab-pane fade" id="licenced_modules" role="tabpanel" aria-labelledby="licenced_modules-tab">
+                                <div class="form-group">
+                                    <div class="form-check">
+                                        <input class="form-check-input" name="network" type="checkbox" id="email_alert" value="Email Alerts">
+                                        <label class="form-check-label" for="email_alert">Email Alerts</label>
+                                    </div>
+                                    <div class="form-check">
+                                        <input class="form-check-input" name="network" type="checkbox" id="arr_manuf" value="Array Manufactures">
+                                        <label class="form-check-label" for="arr_manuf">Array Manufactures</label>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="tab-pane fade" id="snapli_api" role="tabpanel" aria-labelledby="snapli_api-tab">
+                                <div class="form-group">
+                                    <div class="form-check">
+                                        <input class="form-check-input" name="network" type="checkbox" id="api_conf" value="API Configuration Snap/Result">
+                                        <label class="form-check-label" for="api_conf">API Configuration Snap/Result</label>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="tab-pane fade" id="snapli_users" role="tabpanel" aria-labelledby="snapli_users-tab">
+                                <div class="form-group col-md-8">
+                                    <div class="form-check">
+                                        <input class="form-check-input" name="snap_users" type="radio" id="users_for_api" value="Users for the API">
+                                        <label class="form-check-label" for="users_for_api">Users for the API</label>
+                                    </div>
+                                    <div class="form-check">
+                                        <input class="form-check-input" name="snap_users" type="radio" id="users_for_ad" value="Users for the AD">
+                                        <label class="form-check-label" for="users_for_ad">Users for the AD</label>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                     <br><br>
                     <div class="divider"></div>
                     <div class="col-12 pt-3">
-                        <div class="form-row align-items-center">
-                            <div class="form-group col-md-4">
-                                <h4>Configuration</h4>
-                            </div>
-                            <div class="form-group col-md-8">
-                                <input class="form-check-input" name="network" type="checkbox" id="software_config" value="Software Config">
-                                <label class="form-check-label" for="software_config">Software Config</label>
-                                <small class="form-text text-muted">
-                                    Your password must be 8-20 characters long, contain letters and numbers, and must not contain spaces, special characters, or emoji.
-                                </small>
-                            </div>
-                        </div>
-                        <div class="divider"></div>
-                        <div class="form-row align-items-center">
-                            <div class="form-group col-md-4">
-                                <h4>Network</h4>
-                            </div>
-                            <div class="form-group col-md-8">
-                                <div class="form-check">
-                                    <input class="form-check-input" name="network" type="radio" id="ip_dns" value="IP / DNS">
-                                    <label class="form-check-label" for="ip_dns">IP / DNS</label>
-                                </div>
-                                <div class="form-check">
-                                    <input class="form-check-input" name="network" type="radio" id="netmask" value="Net Mask">
-                                    <label class="form-check-label" for="netmask">Net Mask</label>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="divider"></div>
-                        <div class="form-row align-items-center">
-                            <div class="form-group col-md-4">
-                                <h4>Licenced Modules</h4>
-                            </div>
-                            <div class="form-group col-md-8">
-                                <div class="form-check">
-                                    <input class="form-check-input" name="network" type="checkbox" id="email_alert" value="Email Alerts">
-                                    <label class="form-check-label" for="email_alert">Email Alerts</label>
-                                </div>
-                                <div class="form-check">
-                                    <input class="form-check-input" name="network" type="checkbox" id="arr_manuf" value="Array Manufactures">
-                                    <label class="form-check-label" for="arr_manuf">Array Manufactures</label>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="divider"></div>
-                        <div class="form-row align-items-center">
-                            <div class="form-group col-md-4">
-                                <h4>Snapli API</h4>
-                            </div>
-                            <div class="form-group col-md-8">
-                                <div class="form-check">
-                                    <input class="form-check-input" name="network" type="checkbox" id="api_conf" value="API Configuration Snap/Result">
-                                    <label class="form-check-label" for="api_conf">API Configuration Snap/Result</label>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="divider"></div>
-                        <div class="form-row align-items-center">
-                            <div class="form-group col-md-4">
-                                <h4>Snapli Users</h4>
-                            </div>
-                            <div class="form-group col-md-8">
-                                <div class="form-check">
-                                    <input class="form-check-input" name="snap_users" type="radio" id="users_for_api" value="Users for the API">
-                                    <label class="form-check-label" for="users_for_api">Users for the API</label>
-                                </div>
-                                <div class="form-check">
-                                    <input class="form-check-input" name="snap_users" type="radio" id="users_for_ad" value="Users for the AD">
-                                    <label class="form-check-label" for="users_for_ad">Users for the AD</label>
-                                </div>
-                            </div>
-                        </div>
 
                         <div class="form-group">
                             <div class="form-check">
@@ -215,42 +213,6 @@
     </div>
 </div>
 
-<div class="modal fade" id="main_ed" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
-    <div class="modal-dialog modal-dialog-centered" role="document">
-        <div class="modal-content">
-            <div class="modal-header">
-                <h5 class="modal-title">Add Data</h5>
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                    <span aria-hidden="true">&times;</span>
-                </button>
-            </div>
-            <div class="modal-body">
-                <form>
-                    <div class="form-group row" style="margin-right:0;">
-                        <label for="host" class="col-3">Host</label>
-                        <input type="text" class="form-control col-9" id="host" placeholder="Host Address">
-                    </div>
-                    <div class="form-group row" style="margin-right:0;">
-                        <label for="array_name" class="col-3">Array Name</label>
-                        <input type="text" class="form-control col-9" id="array_name" placeholder="Array Name">
-                    </div>
-                    <div class="form-group row" style="margin-right:0;">
-                        <label for="date" class="col-3">Password</label>
-                        <input type="date" class="form-control col-9" id="date" placeholder="">
-                    </div>
-                    <div class="form-group row" style="margin-right:0;">
-                        <label for="details" class="col-3">Details</label>
-                        <textarea class="form-control col-9" id="details" placeholder="Details"></textarea>
-                    </div>
-                </form>
-            </div>
-            <div class="modal-footer">
-                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                <button type="button" class="btn btn-primary">Save changes</button>
-            </div>
-        </div>
-    </div>
-</div>
 
 <footer></footer>
 
