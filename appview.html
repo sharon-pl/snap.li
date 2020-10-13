@@ -21,21 +21,26 @@
             </button>
             <div class="collapse navbar-collapse justify-content-between" id="navbarTogglerDemo01">
                 <a class="navbar-brand" href="index.html">Snapli</a>
-                <ul class="navbar-nav  mt-2 mt-lg-0">
-                    <li class="nav-item">
-                        <a class="nav-link" href="alert.html"><i class="fa fa-exclamation" style="font-size: 17px;"></i> Alerts <span class="sr-only">(current)</span></a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="settings.html"><i class="fa fa-cog" style="font-size: 17px;"></i> Settings</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="about.html"><i class="fa fa-question-circle" style="font-size: 17px;"></i> About</a>
-                    </li>
-                </ul>
-                <form class="form-inline my-2 my-lg-0">
-                    <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-                    <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
-                </form>
+
+                <div class="d-flex align-items-center justify-content-between">
+                    <ul class="navbar-nav  mt-2 mt-lg-0">
+                        <li class="nav-item">
+                            <a class="nav-link" href="alert.html"><i class="fa fa-exclamation" style="font-size: 17px;"></i> Alerts <span class="sr-only">(current)</span></a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="settings.html"><i class="fa fa-cog" style="font-size: 17px;"></i> Settings</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="about.html"><i class="fa fa-question-circle" style="font-size: 17px;"></i> About</a>
+                        </li>
+                    </ul>
+                    <form class="form-inline my-2 my-lg-0 mx-2">
+                        <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+                        <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+                    </form>
+                    <a href="/?logout.php" class="mx-1">Log Out</a>
+                </div>
+
             </div>
         </div>
     </nav>
@@ -48,7 +53,7 @@
                 <div class="col text-center">
                     <h1>Application View</h1>
                 </div>
-                <a type="button text-left" class="btn btn-success btn-lg" data-toggle="modal" data-target="#createapp" href="snapview.html">Create New</a>
+                <!--<a type="button text-left" class="btn btn-success btn-lg" data-toggle="modal" data-target="#createapp">Create New</a>-->
             </div>
         </div>
     </div>
@@ -61,8 +66,10 @@
                 <th>Asign Schedule</th>
                 <th>Completion Status</th>
                 <th>Date/Time Last Snap</th>
+                <th>Hosts</th>
                 <th>health</th>
-                <th>Ping + Storage Space</th>
+                <th>Array</th>
+                <th>Volume</th>
             </tr>
             </thead>
             <tbody>
@@ -80,6 +87,8 @@
                         </div>
                     </div>
                 </td>
+                <td><a href="arrayview.html">Ashton Cox</a></td>
+                <td>Volume 1</td>
             </tr>
             <tr>
                 <td>Garrett Winters</td>
@@ -95,6 +104,8 @@
                         </div>
                     </div>
                 </td>
+                <td><a href="arrayview.html">Brielle Williamson</a></td>
+                <td>Volume 3</td>
             </tr>
             <tr>
                 <td>Ashton Cox</td>
@@ -110,6 +121,8 @@
                         </div>
                     </div>
                 </td>
+                <td><a href="arrayview.html">Cedric Kelly</a></td>
+                <td>Volume 2</td>
             </tr>
             <tr>
                 <td>Cedric Kelly</td>
@@ -125,6 +138,8 @@
                         </div>
                     </div>
                 </td>
+                <td><a href="arrayview.html">Charde Marshall</a></td>
+                <td>Volume 4</td>
             </tr>
             <tr>
                 <td>Airi Satou</td>
@@ -140,6 +155,8 @@
                         </div>
                     </div>
                 </td>
+                <td><a href="arrayview.html">Colleen Hurst</a></td>
+                <td>Volume 5</td>
             </tr>
             <tr>
                 <td>Brielle Williamson</td>
@@ -155,6 +172,8 @@
                         </div>
                     </div>
                 </td>
+                <td><a href="arrayview.html">Garrett Winters</a></td>
+                <td>Volume 1</td>
             </tr>
             <tr>
                 <td>Herrod Chandler</td>
@@ -170,6 +189,8 @@
                         </div>
                     </div>
                 </td>
+                <td><a href="arrayview.html">Herrod Chandler</a></td>
+                <td>Volume 2</td>
             </tr>
             <tr>
                 <td>Rhona Davidson</td>
@@ -185,6 +206,8 @@
                         </div>
                     </div>
                 </td>
+                <td><a href="arrayview.html">Jena Gaines</a></td>
+                <td>Volume 3</td>
             </tr>
             <tr>
                 <td>Colleen Hurst</td>
@@ -200,6 +223,8 @@
                         </div>
                     </div>
                 </td>
+                <td><a href="arrayview.html">Quinn Flynn</a></td>
+                <td>Volume 1</td>
             </tr>
             <tr>
                 <td>Sonya Frost</td>
@@ -215,6 +240,8 @@
                         </div>
                     </div>
                 </td>
+                <td><a href="arrayview.html">Airi Satou</a></td>
+                <td>Volume 5</td>
             </tr>
             <tr>
                 <td>Jena Gaines</td>
@@ -230,6 +257,8 @@
                         </div>
                     </div>
                 </td>
+                <td><a href="arrayview.html">Quinn Flynn</a></td>
+                <td>Volume 1</td>
             </tr>
             <tr>
                 <td>Quinn Flynn</td>
@@ -245,6 +274,8 @@
                         </div>
                     </div>
                 </td>
+                <td><a href="arrayview.html">Airi Satou</a></td>
+                <td>Volume 1</td>
             </tr>
             <tr>
                 <td>Charde Marshall</td>
@@ -260,6 +291,8 @@
                         </div>
                     </div>
                 </td>
+                <td><a href="arrayview.html">Airi Satou</a></td>
+                <td>Volume 1</td>
             </tr>
             </tbody>
             <tfoot>
@@ -269,8 +302,10 @@
                 <th>Asign Schedule</th>
                 <th>Completion Status</th>
                 <th>Date/Time Last Snap</th>
+                <th>Hosts</th>
                 <th>health</th>
-                <th>Ping + Storage Space</th>
+                <th>Array</th>
+                <th>Volume</th>
             </tr>
             </tfoot>
         </table>
@@ -293,14 +328,8 @@
                         <input type="text" class="form-control col-9" id="host" placeholder="100.3.0.100">
                     </div>
                     <div class="form-group row" style="margin-right:0;">
-                        <label for="exampleFormControlSelect1" class="col-3">Volume</label>
-                        <select class="form-control col-9" id="exampleFormControlSelect1">
-                            <option>Volume 1</option>
-                            <option>Volume 2</option>
-                            <option>Volume 3</option>
-                            <option>Volume 4</option>
-                            <option>Volume 5</option>
-                        </select>
+                        <label for="volume_picker" class="col-3">Volume</label>
+                        <input type="text" id="volume_picker" class="form-control col-9" placeholder="pick volumes" data-toggle="modal" data-target="#volumepicker">
                     </div>
                     <div class="form-group row" style="margin-right:0;">
                         <label for="snaps" class="col-3">Snaps</label>
@@ -311,6 +340,41 @@
             <div class="modal-footer">
                 <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
                 <button type="button" class="btn btn-primary">Save changes</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="modal fade" id="volumepicker" tabindex="-1" role="dialog" aria-labelledby="volumepicker" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-body">
+                <form>
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" value="" id="vol_1">
+                        <label class="form-check-label" for="vol_1">Volume 1</label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" value="" id="vol_2">
+                        <label class="form-check-label" for="vol_2">Volume 2</label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" value="" id="vol_3">
+                        <label class="form-check-label" for="vol_3">Volume 3</label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" value="" id="vol_4">
+                        <label class="form-check-label" for="vol_4">Volume 4</label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" value="" id="vol_5">
+                        <label class="form-check-label" for="vol_5">Volume 5</label>
+                    </div>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-primary">Pick Now</button>
             </div>
         </div>
     </div>
@@ -332,7 +396,8 @@
         jQuery('[data-toggle="tooltip"]').tooltip();
         jQuery('.example-popover').popover({
             container: 'body',
-        })
+        });
+        jQuery("#main_filter").append('<a type="button text-left" class="btn btn-outline-success mx-3" data-toggle="modal" data-target="#createapp">Create New</a>');
     });
 </script>
 </body>

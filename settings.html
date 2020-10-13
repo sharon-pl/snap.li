@@ -11,6 +11,7 @@
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
+
 <header>
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
         <div class="container-fluid">
@@ -19,25 +20,31 @@
             </button>
             <div class="collapse navbar-collapse justify-content-between" id="navbarTogglerDemo01">
                 <a class="navbar-brand" href="index.html">Snapli</a>
-                <ul class="navbar-nav  mt-2 mt-lg-0">
-                    <li class="nav-item">
-                        <a class="nav-link" href="alert.html"><i class="fa fa-exclamation" style="font-size: 17px;"></i> Alerts <span class="sr-only">(current)</span></a>
-                    </li>
-                    <li class="nav-item active">
-                        <a class="nav-link" href="settings.html"><i class="fa fa-cog" style="font-size: 17px;"></i> Settings</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="about.html"><i class="fa fa-question-circle" style="font-size: 17px;"></i> About</a>
-                    </li>
-                </ul>
-                <form class="form-inline my-2 my-lg-0">
-                    <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-                    <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
-                </form>
+
+                <div class="d-flex align-items-center justify-content-between">
+                    <ul class="navbar-nav  mt-2 mt-lg-0">
+                        <li class="nav-item">
+                            <a class="nav-link" href="alert.html"><i class="fa fa-exclamation" style="font-size: 17px;"></i> Alerts <span class="sr-only">(current)</span></a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="settings.html"><i class="fa fa-cog" style="font-size: 17px;"></i> Settings</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="about.html"><i class="fa fa-question-circle" style="font-size: 17px;"></i> About</a>
+                        </li>
+                    </ul>
+                    <form class="form-inline my-2 my-lg-0 mx-2">
+                        <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+                        <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+                    </form>
+                    <a href="/?logout.php" class="mx-1">Log Out</a>
+                </div>
+
             </div>
         </div>
     </nav>
 </header>
+
 <div class="card mx-3 my-5">
     <div class="card-header text-center">
         <h1>Settings</h1>
@@ -45,43 +52,6 @@
     <div class="card-body">
         <form class="settings_form">
             <div class="container-fluid">
-                <div class="row align-items-center">
-                    <div class="col-md-12">
-                        <div class="card">
-                            <div class="card-header text-center"><h3>Users Permissions/Roles</h3></div>
-                            <div class="card-body">
-                                <div class="form-row align-items-center">
-                                    <div class="form-group col-md-4">
-                                        <h4>Administrator</h4>
-                                    </div>
-                                    <div class="form-group col-md-8">
-                                        <div class="form-check form-check-inline">
-                                            <input class="form-check-input" name="create_snap" type="radio" id="create_snap" value="create_snap">
-                                            <label class="form-check-label" for="create_snap">Create Snap</label>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="divider"></div>
-                                <div class="form-row align-items-center">
-                                    <div class="form-group col-md-4">
-                                        <h4>Operator</h4>
-                                    </div>
-                                    <div class="form-group col-md-8">
-                                        <h6 style="color:#fff;">.</h6>
-                                        <div class="form-check">
-                                            <input class="form-check-input" type="checkbox" id="view_s1" value="View Screen 1">
-                                            <label class="form-check-label" for="view_s1">View Screen 1</label>
-                                        </div>
-                                        <div class="form-check">
-                                            <input class="form-check-input" type="checkbox" id="view_s2" value="View Screen 2">
-                                            <label class="form-check-label" for="view_s2">View Screen 2</label>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
                 <div class="row mt-3">
                     <div class="col-md-3 mb-3">
                         <ul class="nav nav-pills flex-column" id="myTab" role="tablist">
@@ -93,6 +63,9 @@
                             </li>
                             <li class="nav-item">
                                 <a class="nav-link" id="configuration-tab" data-toggle="tab" href="#configuration" role="tab" aria-controls="configuration" aria-selected="false">Configuration</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" id="permission-tab" data-toggle="tab" href="#permission" role="tab" aria-controls="permission" aria-selected="false">Permission</a>
                             </li>
                             <li class="nav-item">
                                 <a class="nav-link" id="network-tab" data-toggle="tab" href="#network" role="tab" aria-controls="network" aria-selected="false">Network</a>
@@ -145,6 +118,24 @@
                                     <small class="form-text text-muted">
                                         Your password must be 8-20 characters long, contain letters and numbers, and must not contain spaces, special characters, or emoji.
                                     </small>
+                                </div>
+                            </div>
+                            <div class="tab-pane fade" id="permission" role="tabpanel" aria-labelledby="permission-tab">
+                                <div class="form-group col-md-8">
+                                    <h4>Administrator</h4>
+                                    <div class="form-check">
+                                        <input class="form-check-input" name="create_snap" type="radio" id="create_snap" value="create_snap">
+                                        <label class="form-check-label" for="create_snap">Create Snap</label>
+                                    </div>
+                                    <h4>Operator</h4>
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" id="view_s1" value="View Screen 1">
+                                        <label class="form-check-label" for="view_s1">View Screen 1</label>
+                                    </div>
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" id="view_s2" value="View Screen 2">
+                                        <label class="form-check-label" for="view_s2">View Screen 2</label>
+                                    </div>
                                 </div>
                             </div>
                             <div class="tab-pane fade" id="network" role="tabpanel" aria-labelledby="network-tab">

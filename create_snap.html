@@ -11,6 +11,7 @@
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
+
 <header>
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
         <div class="container-fluid">
@@ -19,25 +20,31 @@
             </button>
             <div class="collapse navbar-collapse justify-content-between" id="navbarTogglerDemo01">
                 <a class="navbar-brand" href="index.html">Snapli</a>
-                <ul class="navbar-nav  mt-2 mt-lg-0">
-                    <li class="nav-item">
-                        <a class="nav-link" href="alert.html"><i class="fa fa-exclamation" style="font-size: 17px;"></i> Alerts <span class="sr-only">(current)</span></a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="settings.html"><i class="fa fa-cog" style="font-size: 17px;"></i> Settings</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="about.html"><i class="fa fa-question-circle" style="font-size: 17px;"></i> About</a>
-                    </li>
-                </ul>
-                <form class="form-inline my-2 my-lg-0">
-                    <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-                    <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
-                </form>
+
+                <div class="d-flex align-items-center justify-content-between">
+                    <ul class="navbar-nav  mt-2 mt-lg-0">
+                        <li class="nav-item">
+                            <a class="nav-link" href="alert.html"><i class="fa fa-exclamation" style="font-size: 17px;"></i> Alerts <span class="sr-only">(current)</span></a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="settings.html"><i class="fa fa-cog" style="font-size: 17px;"></i> Settings</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="about.html"><i class="fa fa-question-circle" style="font-size: 17px;"></i> About</a>
+                        </li>
+                    </ul>
+                    <form class="form-inline my-2 my-lg-0 mx-2">
+                        <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+                        <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+                    </form>
+                    <a href="/?logout.php" class="mx-1">Log Out</a>
+                </div>
+
             </div>
         </div>
     </nav>
 </header>
+
 <div class="card mx-3 my-5">
     <div class="card-header">
         <div class="container-fluid">
