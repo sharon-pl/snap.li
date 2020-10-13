@@ -7,27 +7,37 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-social/5.1.1/bootstrap-social.min.css" />
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link rel="stylesheet" href="//cdn.datatables.net/1.10.22/css/jquery.dataTables.min.css">
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.10.22/css/jquery.dataTables.min.css">
     <link rel="stylesheet" href="css/style.css">
 </head>
+
 <body>
+
 <header>
+    <div class="container-fluid bg-light">
+        <div class="row py-1 justify-content-between align-items-center">
+            <div class="col">
+                <a class="main_button"  data-toggle="modal" data-target="#main_ed">Main</a>
+            </div>
+            <div class="col"><div class="top_right_txt">XXXXX Software Version</div></div>
+        </div>
+    </div>
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
-        <div class="container">
+        <div class="container-fluid">
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse justify-content-between" id="navbarTogglerDemo01">
                 <a class="navbar-brand" href="index.html">Snapli</a>
                 <ul class="navbar-nav  mt-2 mt-lg-0">
-                    <li class="nav-item active">
-                        <a class="nav-link" href="#"><i class="fa fa-exclamation" style="font-size: 17px;"></i> Alerts <span class="sr-only">(current)</span></a>
+                    <li class="nav-item">
+                        <a class="nav-link" href="alert.html"><i class="fa fa-exclamation" style="font-size: 17px;"></i> Alerts <span class="sr-only">(current)</span></a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#"><i class="fa fa-cog" style="font-size: 17px;"></i> Settings</a>
+                        <a class="nav-link" href="settings.html"><i class="fa fa-cog" style="font-size: 17px;"></i> Settings</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link disabled" href="#"><i class="fa fa-question-circle" style="font-size: 17px;"></i> About</a>
+                        <a class="nav-link" href="about.html"><i class="fa fa-question-circle" style="font-size: 17px;"></i> About</a>
                     </li>
                 </ul>
                 <form class="form-inline my-2 my-lg-0">
@@ -38,16 +48,19 @@
         </div>
     </nav>
 </header>
-<section class="section">
-    <div class="container">
-        <div class="row py-5 justify-content-center align-items-center">
-            <div class="col text-center">
-                <h1>APP ViEW</h1>
+
+<div class="card mx-3 my-5">
+    <div class="card-header">
+        <div class="container-fluid">
+            <div class="row  px-3 justify-content-center align-items-center">
+                <div class="col text-center">
+                    <h1>APP ViEW</h1>
+                </div>
+                <a type="button text-left" class="btn btn-success btn-lg" data-toggle="modal" data-target="#createapp" href="snapview.html">Create New</a>
             </div>
-            <a type="button text-left" class="btn btn-success btn-lg" data-toggle="modal" data-target="#createapp" href="snapview.html">Create New</a>
         </div>
     </div>
-    <div class="container">
+    <div class="card-body">
         <table id="main" class="display" style="width:100%">
             <thead>
             <tr>
@@ -270,7 +283,44 @@
             </tfoot>
         </table>
     </div>
-</section>
+</div>
+
+<div class="modal fade" id="main_ed" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">Add Data</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <form>
+                    <div class="form-group row" style="margin-right:0;">
+                        <label for="main_host" class="col-3">Host</label>
+                        <input type="text" class="form-control col-9" id="main_host" placeholder="Host Address">
+                    </div>
+                    <div class="form-group row" style="margin-right:0;">
+                        <label for="array_name" class="col-3">Array Name</label>
+                        <input type="text" class="form-control col-9" id="array_name" placeholder="Array Name">
+                    </div>
+                    <div class="form-group row" style="margin-right:0;">
+                        <label for="date" class="col-3">Password</label>
+                        <input type="date" class="form-control col-9" id="date" placeholder="">
+                    </div>
+                    <div class="form-group row" style="margin-right:0;">
+                        <label for="details" class="col-3">Details</label>
+                        <textarea class="form-control col-9" id="details" placeholder="Details"></textarea>
+                    </div>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-primary">Save changes</button>
+            </div>
+        </div>
+    </div>
+</div>
 <div class="modal fade" id="createapp" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
     <div class="modal-dialog modal-dialog-centered" role="document">
         <div class="modal-content">
@@ -309,15 +359,14 @@
         </div>
     </div>
 </div>
-<footer>
 
-</footer>
+<footer></footer>
 
 <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-<script src="//cdn.datatables.net/1.10.22/js/jquery.dataTables.min.js"></script>
+<script src="https://cdn.datatables.net/1.10.22/js/jquery.dataTables.min.js"></script>
 <script src="js/custom.js"></script>
 <script>
     jQuery(document).ready( function () {

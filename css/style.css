@@ -19,3 +19,29 @@
     border-radius: 50%;
     margin: auto;
 }
+a.main_button {
+    color: #28a745;
+    font-family: cursive;
+    font-size: 29px;
+    text-decoration: none;
+    cursor: pointer;
+}
+.top_right_txt {
+    text-align: right;
+    color: red;
+    font-family: cursive;
+    font-size: 19px;
+}
+.navbar{
+    /*padding-right:0px;*/
+    /*padding-left: 0px;*/
+}
+.divider {
+    border-bottom: 1px solid #eaeaea;
+}
+.settings_form{
+    width: 100%;
+}
+.hidden{
+    display:none;
+}
