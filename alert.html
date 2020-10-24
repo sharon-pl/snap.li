@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>! ~ Alert</title>
+    <title>Alerts Configuration</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-social/5.1.1/bootstrap-social.min.css" />
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -70,7 +70,7 @@
         </ul>
         <div class="tab-content" id="pills-tabContent">
             <div class="tab-pane fade show active" id="capacity" role="tabpanel" aria-labelledby="capacity-tab">
-                <div class="alert alert-warning" role="alert">
+                <div class="alert alert-secondary" role="alert">
                     <h3>70% over Provisioned, It will be no available Capacity soon, Upgrade</h3><br>
                     <form class="form-inline">
                         <div class="form-group mb-2">
@@ -104,13 +104,27 @@
                 </div>
             </div>
             <div class="tab-pane fade" id="communicate" role="tabpanel" aria-labelledby="communicate-tab">
-                <div class="alert alert-warning" role="alert">
-                    Unable to communicate with internet or with array or Snap Miss or Array go down<br> Call a Number
+                <div class="alert alert-secondary" role="alert">
+                    <h3>On Unable to communicate with array or Snap Missed or Array is down</h3><br>
+                    <form class="form-inline">
+                        <div class="form-group mb-2">
+                            <label for="snap_failed">Send Email To</label>
+                            <input type="text"  class="form-control" id="snap_failed" placeholder="email@example.com">
+                        </div>
+                        <button type="submit" class="btn btn-primary mb-2">Submit</button>
+                    </form>
                 </div>
             </div>
             <div class="tab-pane fade" id="snapli_server" role="tabpanel" aria-labelledby="snapli_server-tab">
-                <div class="alert alert-danger" role="alert">
-                    Your Local Storage is out
+                <div class="alert alert-secondary" role="alert">
+                    <h3>On Storage is out</h3><br>
+                    <form class="form-inline">
+                        <div class="form-group mb-2">
+                            <label for="snap_failed">Send Email To</label>
+                            <input type="text"  class="form-control" id="snap_failed" placeholder="email@example.com">
+                        </div>
+                        <button type="submit" class="btn btn-primary mb-2">Submit</button>
+                    </form>
                 </div>
             </div>
         </div>
